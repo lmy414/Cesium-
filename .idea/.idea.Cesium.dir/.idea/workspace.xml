@@ -7,6 +7,7 @@
     <list default="true" id="29a168de-d8c1-4a7a-94b5-df15c9d64842" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cesium.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cesium.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Course/2112001135/Hello World.html" beforeDir="false" afterPath="$PROJECT_DIR$/Course/2112001135/Hello World.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course/2112001135/image/XMUT.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +24,14 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Course/2112001135/style/CesiumNavigation.umd.js.map" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -94,7 +99,8 @@
       <workItem from="1719908047767" duration="609000" />
       <workItem from="1720054884261" duration="6033000" />
       <workItem from="1720061901143" duration="775000" />
-      <workItem from="1720074991558" duration="887000" />
+      <workItem from="1720074991558" duration="2024000" />
+      <workItem from="1720100373167" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="作业最终版">
       <option name="closed" value="true" />
@@ -104,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720059808753</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改">
+      <option name="closed" value="true" />
+      <created>1720076820988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720076820988</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="作业最终版" />
-    <option name="LAST_COMMIT_MESSAGE" value="作业最终版" />
+    <MESSAGE value="修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改" />
   </component>
 </project>
