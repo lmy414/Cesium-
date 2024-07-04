@@ -1,0 +1,175 @@
+@import "commen.less";
+
+body {
+    header {
+        nav {
+            width: 100%;
+            height: @navHeight;
+            position: fixed;
+            top: 0;
+            background-color: @bgColor;
+            backdrop-filter: blur(8px);
+            line-height: @navHeight;
+            z-index: 10;
+
+            .nav1 {
+                position: relative;
+                height: @navHeight;
+                text-align: center;
+
+                .clearfix::after {
+                    content: '';
+                    height: 0;
+                    display: block;
+                    clear: both;
+                }
+
+                li {
+                    position: relative;
+                    width: 16vw;
+                    max-width: @navWidth;
+                    height: 100%;
+                    color: @bgColor1;
+                    float: right;
+
+                    &:nth-child(6) {
+                        p {
+                            position: absolute;
+                            display: block;
+                            height: @navHeight;
+                            width: 100%;
+                            color: @bgColor1;
+                            z-index: 10;
+                            opacity: 0.6;
+                            transition: 0.4s;
+
+                            &:hover {
+                                color: @bgColor;
+                                opacity: 1;
+
+                            }
+                        }
+                    }
+                }
+
+
+                a {
+                    position: absolute;
+                    display: block;
+                    height: @navHeight;
+                    width: 100%;
+                    color: @bgColor1;
+                    opacity: 0.6;
+                    z-index: 10;
+                    transition: 0.4s;
+                }
+
+                .nav2 {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 100%;
+                    height: calc(@navHeight * 5);
+                    width: 100%;
+                    overflow: hidden;
+
+                    ul {
+                        height: 100%;
+                        width: 100%;
+                        transform: translateY(calc(-@navHeight * 5));
+                        transition: all 0.4s;
+
+                        li {
+                            height: @navHeight;
+                            background-color: @bgColor;
+                            width: 100%;
+
+                            &:last-child {
+                                border-radius: 0 0 10px 10px;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                }
+
+                a:hover {
+                    color: @bgColor;
+                    opacity: 1;
+                }
+
+                li:hover > .nav2 {
+                    visibility: visible;
+
+                    & > ul {
+                        transform: translateY(0);
+                    }
+                }
+
+                li::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 16vw;
+                    max-width: @navWidth;
+                    height: @navHeight;
+                    background-color: whitesmoke;
+                    opacity: 0.6;
+                    transform: scale(0);
+                    transition: 0.4s;
+                    border-radius: 10px;
+                    z-index: 10;
+                }
+
+                li:hover::before {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        .footNav {
+            position: fixed;
+            bottom: 0;
+            right: 10px;
+
+            li {
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+                margin-bottom: 16px;
+                color: @bgColor1;
+                background-color: @bgColor;
+                backdrop-filter: blur(8px);
+                z-index: 10;
+                transition: all 0.4s;
+                overflow: hidden;
+
+                span {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                }
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: @bgColor1;
+                }
+
+                &:hover {
+                    color: @bgColor;
+                    background-color: @bgColor1;
+                    transform: scale(1.1);
+
+                    a {
+                        color: @bgColor;
+                    }
+                }
+            }
+        }
+    }
+}

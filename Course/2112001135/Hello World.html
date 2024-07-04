@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciallo～(∠・ω< )⌒☆</title>
+    <link rel = "icon" href = image/O30_FAT]TG_X4F6]HQ$64A4.gif>
+    <script src="../../Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="./style/commen.css">
+    <link rel="stylesheet/less" type="text/css" href="./style/m.index.less" media="screen and (max-width:625px)" />
+    <link rel="stylesheet/less" type="text/css" href="./style/index.less" media="screen and (min-width:625px)" />
+    <script src="./JS/less.min.js"></script>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        @import url(../../Cesium/Widgets/widgets.css);
+        @import url(./style/hawkEyeMap.css);
+        html, body, #cesiumContainer {
+            width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<header id="top">
+    <nav>
+        <div class="nav3">
+            <img src="image/XMUT.png" width="198" height="32">
+        </div>
+        <div id="显示学号姓名" style="width:160px;height:30px;position:absolute;top:0px;left:350px;z-index:1;font-size:20px;">
+            <font size="3.8" color="white">2112001135 廖明煜</font>
+        </div>
+        <ul class="nav1">
+            <li class="clearfix" >
+                <p><span class="iconfont"></span>相机飞行</p>
+                <section class="nav2">
+                    <ul>
+                        <li><a href="#" onclick="cameraFly()"><span class="iconfont "></span>相机飞行</a></li>
+                        <li><a href="#" onclick="cameraStop()"><span class="iconfont"></span>停止飞行</a></li>
+                    </ul>
+                </section>
+            </li>
+            <li class="clearfix">
+                <p><span class="iconfont "></span>天气效果</p>
+                <section class="nav2">
+                <ul>
+                    <li><a href="#" onclick="handleSnow(90.0)"><span class="iconfont "></span>雪</a></li>
+                    <li><a href="#" onclick="handleRain(20.0, 90.0)"><span class="iconfont "></span>雨</a></li>
+                    <li><a href="#" onclick="handleBigFog()"><span class="iconfont "></span>雾</a></li>
+                    <li><a href="#" onclick="removeStage()"><span class="iconfont"></span>关闭效果</a></li>
+                </ul>
+                </section>
+            </li>
+            <li class="clearfix" >
+                <p><span class="iconfont "></span>定位</p>
+                <section class="nav2">
+                    <ul>
+                        <li><a href="#" onclick="xmut()"><span class="iconfont "></span>厦门理工大学</a></li>
+                        <li><a href="#" onclick="xmdx()"><span class="iconfont "></span>厦门大学</a></li>
+                        <li><a href="#" onclick="jmdx()"><span class="iconfont "></span>集美大学</a></li>
+                        <li><a href="#" onclick="xmgxy()"><span class="iconfont"></span>厦门工学院</a></li>
+                        <li><a href="#" onclick="hqdx()"><span class="iconfont"></span>华侨大学</a></li>
+                    </ul>
+                </section>
+            </li>
+            <li class="clearfix">
+                <p><span class="iconfont "></span>测量</p>
+                <section class="nav2">
+                    <ul>
+                        <li><a href="#" onclick="measureLineSpace(viewer, handler);"><span class="iconfont "></span>测量长度</a></li>
+                        <li><a href="#" onclick="measureAreaSpace(viewer, handler);"><span class="iconfont"></span>测量面积</a></li>
+                        <li><a href="#" onclick="clearDrawingBoard();"><span class="iconfont"></span>清除测量</a></li>
+                    </ul>
+                </section>
+            <li class="clearfix">
+                <p><span class="iconfont "></span>模型加载</p>
+                <section class="nav2">
+                    <ul>
+                    <li><a href="#" onclick="ModelOn()"><span class="iconfont "></span>加载模型</a></li>
+                    <li><a href="#" onclick="ModelOff()"><span class="iconfont"></span>移除模型</a></li>
+                    </ul>
+                </section>
+            </li>
+            <li class="clearfix">
+                <p><span class="iconfont"></span>视图切换</p>
+                <section class="nav2">
+                    <ul>
+                        <li><a href="#" onclick="fly1()"><span class="iconfont "></span>默认视图</a></li>
+                        <li><a href="#" onclick="fly()"><span class="iconfont"></span>俯视图</a></li>
+                    </ul>
+                </section>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <div id="cesiumContainer"></div>
+
+<!--坐标-->
+<div id="latlng_show" style="width:620px;height:30px;position:absolute;bottom:20px;left:70px;z-index:1;font-size:15px;">
+    <div style="width:140px;height:30px;float:left;">
+        <font size="3" color="white">经度：<span id="longitude_show"></span></font>
+    </div>
+    <div style="width:140px;height:30px;float:left;">
+        <font size="3" color="white">纬度：<span id="latitude_show"></span></font>
+    </div>
+    <div style="width:240px;height:30px;float:left;">
+        <font size="3" color="white">视角高：<span id="altitude_show"></span>km</font>
+    </div>
+</div>
+
+<!--鹰眼地图-->
+    <div id="hawkEyeMap" style="z-index: 5;"></div>
+
+
+    <script src="./JS/viewerCesiumNavigationMixin.min.js"></script>
+    <script src="./JS/effect.js"></script>
+    <script src="./JS/hawkEyeMap.js"></script>
+    <script src="./JS/app.js"></script>
+    <script src="./JS/visual angle.js"></script>
+    <script src="./JS/camera fly.js"></script>
+    <script src="./JS/measurement.js"></script>
+    <script src="./JS/osm.js"></script>
+
+</body>
+</html>

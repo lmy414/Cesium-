@@ -1,0 +1,18 @@
+#hawkEyeMap {
+    position: absolute;
+    right: 25px;
+    top: 730px;
+    height: 160px;
+    width: 160px;
+    overflow: hidden;
+    border: none; /* 去掉边框 */
+    border-radius: 25px; /* 设置圆滑半径 */
+    box-shadow: 0 0 10px rgba(0, 47, 167, 0.5); /* 添加阴影效果 */
+}
+.nav3{
+    width: 200px;
+    height: 32px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
